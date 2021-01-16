@@ -3,8 +3,55 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   color: #333;
+  padding: 24px;
+
+  .nav {
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: #999;
+      margin-right: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        font-size: 20px;
+        font-weight: bolder;
+        color: #000;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    flex: 1;
+    border: 1px solid #999;
+
+    > div.bpmn-container {
+      width: 100%;
+      height: 100%;
+
+      .bjs-powered-by {
+        display: none;
+      }
+    }
+
+    > div#bpmn-properties-panel-container {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
 }
