@@ -16,6 +16,7 @@ body,
 
   .nav {
     margin-bottom: 20px;
+
     a {
       text-decoration: none;
       color: #999;
@@ -34,24 +35,48 @@ body,
   }
 
   .content {
-    position: relative;
     flex: 1;
     border: 1px solid #999;
 
+    .btn-container {
+      padding: 10px;
+      border-top: 1px solid #999;
+
+      button {
+        width: 100px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        padding: 0;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
     > div.bpmn-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       height: 100%;
 
       .bjs-powered-by {
         display: none;
       }
-    }
 
-    > div#bpmn-properties-panel-container {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
+      > div.bpmn-canvas {
+        flex: 1;
+      }
+
+      > div#bpmn-properties-panel-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
     }
   }
 }

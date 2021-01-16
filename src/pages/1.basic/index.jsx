@@ -20,7 +20,7 @@ function Basic() {
 
   useEffect(() => {
     m = new BpmnModeler({
-      container: ".bpmn-basic",
+      container: ".bpmn-canvas",
       // 添加控制板
       propertiesPanel: {
         parent: "#bpmn-properties-panel-container",
@@ -38,10 +38,10 @@ function Basic() {
   }, []);
 
   return (
-    <>
-      <div className="bpmn-container bpmn-basic"></div>
+    <div className="bpmn-container">
+      <div className="bpmn-canvas bpmn-basic"></div>
       <div id="bpmn-properties-panel-container"></div>
-    </>
+    </div>
   );
 }
 
