@@ -17,6 +17,10 @@ import {
   PartCustom as PartCustomRenderer,
   AllCustom as AllCustomRenderer,
 } from "./pages/5.custom-renderer";
+import {
+  PartCustom as PartCustomContextPad,
+  AllCustom as AllCustomContextPad,
+} from "./pages/6.custom-contextpad";
 
 function App() {
   return (
@@ -29,6 +33,8 @@ function App() {
         <NavLink to="/all-custom-palette">4-2.完全自定义palette</NavLink>
         <NavLink to="/part-custom-renderer">5-1.部分自定义renderer</NavLink>
         <NavLink to="/all-custom-renderer">5-2.完全自定义renderer</NavLink>
+        <NavLink to="/part-custom-contextpad">6-1.部分自定义contextpad</NavLink>
+        <NavLink to="/all-custom-contextpad">6-2.完全自定义contextpad</NavLink>
       </div>
       <div className="content">
         <Switch>
@@ -53,6 +59,16 @@ function App() {
           <Route
             path="/all-custom-renderer"
             component={AllCustomRenderer}
+            exact
+          />
+          <Route
+            path="/part-custom-contextpad"
+            component={PartCustomContextPad}
+            exact
+          />
+          <Route
+            path="/all-custom-contextpad"
+            component={AllCustomContextPad}
             exact
           />
           <Redirect to="/basic" />
